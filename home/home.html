@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Inicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="logo_user.png" alt="Perfil" class="profile-logo">
+                <p>Nombre Empresa</p>
+            </div>
+            <nav>
+                <ul>
+                    <li>Empleados</li>
+                    <li>Crear empleado</li>
+                    <li>Lista de empleados</li>
+                    <li>Gestionar empleados</li>
+                    <li>Novedades</li>
+                    <li>Nóminas</li>
+                    <li>Configuración</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button>🔍</button>
+                </div>
+                <button id="logout">Cerrar sesión</button>
+            </header>
+            <section class="dashboard-content">
+                <div class="charts">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
