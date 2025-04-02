@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Inicio</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-    <link rel="stylesheet" href="./css/home_styles.css">
+    <!-- <link rel="stylesheet" href="./css/home_styles.css"> -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="dashboard-container">
+    <div id="topbar"></div>
+    <div id="sidebar"></div>
+
+    <!-- <div class="dashboard-container">
         <aside class="sidebar">
             <div class="profile">
                 <img src="./img/logo_user.png" alt="Perfil" class="profile-logo">
@@ -40,8 +45,18 @@
                 </div>
             </section>
         </main>
-    </div>
+    </div> -->
 </body>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+
+        loadComponent("topbar", "topbar.html");
+        loadComponent("sidebar", "sidebar.html");
+    </script>
 </html>
 
 
