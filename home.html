@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Inicio</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- <link rel="stylesheet" href="./css/home_styles.css"> -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-    <div id="topbar"></div>
+
+<body class="home">
+
+    <header id="topbar" class="top-bar"></header>
     <div id="sidebar"></div>
 
     <!-- <div class="dashboard-container">
@@ -47,16 +50,15 @@
         </main>
     </div> -->
 </body>
-    <script>
-        function loadComponent(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
+<script>
+    function loadComponent(id, file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(id).innerHTML = data);
+    }
 
-        loadComponent("topbar", "topbar.html");
-        loadComponent("sidebar", "sidebar.html");
-    </script>
+    loadComponent("topbar", "./common/topbar.html");
+    loadComponent("sidebar", "./common/sidebar.html");
+</script>
+
 </html>
-
-
