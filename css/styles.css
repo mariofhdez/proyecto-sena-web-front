@@ -201,6 +201,10 @@ a {
   margin: 6px 0;
 }
 
+.search-bar button > img {
+  padding-right: 4px;
+}
+
 /* --------------------------------Sidebar-------------------------------- */
 
 .sidebar {
