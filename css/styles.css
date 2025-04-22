@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(../fonts/SourceSansPro-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Estilos generales */
 :root {
   --blanco-grisaseo: #EFF5F7;
@@ -8,6 +15,11 @@
 
   --bg-secondary: #F2F6FA;
   --border-color: #E0E0E0;
+  --secondary-text-color: #6e6e6e;
+
+  --font-logo: "Reem Kufi", sans-serif;
+  --font-titles: "DM Serif Display", sans-serif;
+  --font-body: "Source Sans Pro", sans-serif;
 }
 
 html {
@@ -23,6 +35,12 @@ html {
   box-sizing: inherit;
 }
 
+h3{
+  font-size: 2.8rem;
+  font-family: var(--font-titles);
+  font-weight: normal;
+}
+
 .shadow {
   -webkit-box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.5);
   -moz-box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.5);
@@ -31,10 +49,13 @@ html {
 
 .btn {
   display: block;
+  width: 16rem;
+  height: 4rem;
+  padding: 0.8rem 1.6rem;
+
   font-size: 1.8rem;
   /* margin: 1rem 0; */
-  padding: 1rem;
-  width: 25rem;
+  /* padding: 1rem; */
   background-color: var(--azul-marino-pastel);
   border-radius: 0.5rem;
   border-color: var(--azul-marino-pastel);
@@ -48,6 +69,14 @@ html {
 
 .btn:hover {
   cursor: pointer;
+}
+
+.btn-md{
+  width: 16rem;
+}
+
+.btn-lg{
+  width: 25rem;
 }
 
 .icon-btn {
@@ -160,7 +189,7 @@ a {
 
 .top-bar .logo-container .logo>span {
   color: #56CCF2;
-  font-family: "Reem Kufi";
+  font-family: var(--font-logo);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 600;
@@ -325,7 +354,103 @@ a {
   /* align-content: self-start; */
 }
 
-section {
-  flex: 1 1 0%;
+.main-content {
+  width: 100%;
+  flex: 1 0 0;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  position: fixed;
+  top: 5.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh - 5.6rem);
+  overflow-y: auto;
+}
+
+/* -----------------------------create employee------------------------ */
+
+main{
+  width: 100%;
+  display: flex;
+  padding: 2.4rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* flex 1 0 0; */
+  margin-left: 24.8rem;
+  /* margin-top: 5.6rem; */
+}
+
+.form-container{
+  display: flex;
+  width: 60rem;
+  padding: 4rem 2.4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  margin: auto;
+  background-color: var(--bg-secondary);
+  border-radius: 1.6rem;
+}
+
+.form-container > form {
+  display: flex;
+  padding: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  width: 22.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.field > label {
+  color: var(--color-texto);
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+.field > select, .field > input {
+  align-self: stretch;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  color: var(--secondary-text-color);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.92rem;
+}
+
+.lg{
+  width: 47.2rem;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 0 0 auto;
+  padding: 1rem 4rem;
+  gap: 2.4rem
+}
+
+.disable {
+  display: none;
 }

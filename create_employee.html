@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear empleado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Reem+Kufi:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="home">
+
+    <navbar id="topbar" class="top-bar"></navbar>
+    <section class="main-content">
+        <aside class="sidebar" id="sidebar"></aside>
+        <main>
+            <section class="form-container shadow" id="basic-data">
+                <h3>Datos básicos</h3>
+                <form action="">
+                    <div class="field">
+                        <label for="identificationType">Tipo de identificación</label>
+                        <select name="identificationType" id="identification-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="13">Cédula de ciudadanía</option>
+                            <option value="31">NIT</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="identificationNumber">Número de documento</label>
+                        <input type="text" name="identificationNumber" placeholder="Ingrese su identificación">
+                    </div>
+                    <div class="field">
+                        <label for="firstName">Primer nombre</label>
+                        <input type="text" name="firstName" placeholder="Ingrese su primer nombre">
+                    </div>
+                    <div class="field">
+                        <label for="middleName">Segundo nombre</label>
+                        <input type="text" name="middleName" placeholder="Ingrese su segundo nombre">
+                    </div>
+                    <div class="field">
+                        <label for="lastName">Primer apellido</label>
+                        <input type="text" name="lastName" placeholder="Ingrese su primer apellido">
+                    </div>
+                    <div class="field">
+                        <label for="secondLastName">Segundo apellido</label>
+                        <input type="text" name="secondLastName" placeholder="Ingrese su segundo apellido">
+                    </div>
+                    <div class="field lg">
+                        <label for="address">Dirección</label>
+                        <input type="text" name="address" placeholder="Ingrese su dirección">
+                    </div>
+                    <div class="field">
+                        <label for="department">Departamento</label>
+                        <select name="department" id="department-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="05">Antioquia</option>
+                            <option value="66">Risaralda</option>
+                            <option value="63">Quindío</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="city">Ciudad</label>
+                        <select name="city" id="city-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="05001">Medellín</option>
+                            <option value="66001">Pereira</option>
+                            <option value="63001">Armenia</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="btn-container">
+                    <button class="btn btn-md" id="continue-basic">Continuar</button>
+                </div>
+            </section>
+            <section class="disable" id="contract-data">
+                <h3>Datos de Contrato</h3>
+                <form action="">
+                    <div class="field">
+                        <label for="highRiskJob">Trabajo de alto riesgo</label>
+                        <select name="highRiskJob" id="highRiskJob-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="1">Si</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="integralSalary">Salario integral</label>
+                        <select name="integralSalary" id="integralSalary-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="1">Si</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="employeeType">Tipo de empleado</label>
+                        <select name="employeeType" id="employeeType-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="01">Dependiente</option>
+                            <option value="12">Aprendices del SENA en etapa lectiva</option>
+                            <option value="19">Aprendices del SENA en etapa productiva</option>
+                            <option value="23">Estudiantes aportes solo riesgos laborales</option>
+                            <option value="51">Trabajador de tiempo parcial</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="employeeSubtype">Subtipo de empleado</label>
+                        <select name="employeeSubtype" id="employeeSubtype-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="00">No aplica</option>
+                            <option value="01">Dependiente pensionado por vejez activo</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="contractType">Tipo de contrato</label>
+                        <select name="contractType" id="contractType-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="1">Término fijo</option>
+                            <option value="2">Término indefinido</option>
+                            <option value="3">Obra o labor</option>
+                            <option value="4">Aprendizaje</option>
+                            <option value="5">Prácticas o pasantías</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="startDate">Fecha de inicio</label>
+                        <input type="date" name="startDate" id="startDate-selector" />
+                    </div>
+                    <div class="field">
+                        <label for="position">Cargo</label>
+                        <input type="text" name="position" placeholder="Ingrese su cargo">
+                    </div>
+                    <div class="field">
+                        <label for="endDate">Fecha de finalización</label>
+                        <input type="date" name="endDate" id="endDate-selector" />
+                    </div>
+                    <div class="field">
+                        <label for="income">Salario</label>
+                        <input type="text" name="income" placeholder="Ingrese su salario">
+                    </div>
+                    <div class="field">
+                        <label for="allowanceTransport">Subsidio de transporte</label>
+                        <select name="allowanceTransport" id="allowanceTransport-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="1">Si</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                </form>
+                <div class="btn-container">
+                    <button class="btn btn-md" id="back-contract">atrás</button>
+                    <button class="btn btn-md" id="continue-contract">Continuar</button>
+                </div>
+            </section>
+            <section class="disable" id="payment-data">
+                <h3>Datos de Pago</h3>
+                <form action="">
+                    <div class="field">
+                        <label for="paymentMethod">Método de pago</label>
+                        <select name="paymentMethod" id="paymentMethod-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="10">Efectivo</option>
+                            <option value="20">Cheque</option>
+                            <option value="30">Transferencia crédito</option>
+                            <option value="31">Transferencia débito</option>
+                            <option value="42">Consignación bancaria</option>
+                            <option value="71">Bonos</option>
+                            <option value="72">Vales</option>
+                            <option value="ZZZ">Acuerdo mutuo</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="accountType">Tipo de cuenta</label>
+                        <select name="accountType" id="accountType-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="1">Cuenta ahorros</option>
+                            <option value="2">Cuenta corriente</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="bank">Entidad bancaria</label>
+                        <select name="bank" id="bank-selector">
+                            <option value="null" selected disabled>Seleccione una opción</option>
+                            <option value="01">Bancolombia</option>
+                            <option value="02">Banco Davivienda</option>
+                            <option value="03">Banco Caja Social</option>
+                            <option value="04">Banco Popular</option>
+                            <option value="05">Nu bank</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="accountNumber">Número de cuenta</label>
+                        <input type="text" name="accountNumber" placeholder="Ingrese su número de cuenta">
+                    </div>
+                </form>
+                <div class="btn-container">
+                    <button class="btn btn-md" id="back-payment">atrás</button>
+                    <button class="btn btn-md" id="save">Guardar</button>
+                </div>
+            </section>
+        </main>
+    </section>
+
+
+
+</body>
+<script>
+
+    function loadComponent(id, file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(id).innerHTML = data);
+    }
+
+    loadComponent("topbar", "./common/topbar.html");
+    loadComponent("sidebar", "./common/sidebar.html");
+
+    document.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            switch (button.id) {
+                case "continue-basic":
+                    document.querySelector("#basic-data").setAttribute("class", "disable");
+                    document.querySelector("#contract-data").setAttribute("class", "form-container shadow");
+                    break;
+                case "continue-contract":
+                    document.querySelector("#contract-data").setAttribute("class", "disable");
+                    document.querySelector("#payment-data").setAttribute("class", "form-container shadow");
+                    break;
+                case "back-payment":
+                    document.querySelector("#payment-data").setAttribute("class", "disable");
+                    document.querySelector("#contract-data").setAttribute("class", "form-container shadow");
+                    break;
+                case "back-contract":
+                    document.querySelector("#contract-data").setAttribute("class", "disable");
+                    document.querySelector("#basic-data").setAttribute("class", "form-container shadow");
+                    break;
+                case "logout":
+                    alert("sesion finalizada");
+                    window.location.replace("/login.html")
+                    break
+                default:
+                    break;
+            }
+
+        })
+    })
+
+    // btn = document.querySelector("#continue");
+
+    // btn.addEventListener("click", (e)=>{
+
+    //     const dad = btn.parentElement;
+    //     const grand = dad.parentElement;
+
+    //     console.log("el valor del boton" + btn.value);
+    // })
+
+</script>
+
+</html>
